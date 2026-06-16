@@ -1,13 +1,163 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Autos - nombredelproyecto</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autos Nuevos</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body{
+        background:#f4f4f4;
+    }
+
+    header{
+        background:#111;
+        color:white;
+        text-align:center;
+        padding:30px;
+    }
+
+    header h1{
+        font-size:2.5rem;
+    }
+
+    .hero{
+        background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600') center/cover;
+        height:400px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        color:white;
+        text-shadow:2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    .hero h2{
+        font-size:3rem;
+    }
+
+    .container{
+        max-width:1200px;
+        margin:auto;
+        padding:40px 20px;
+    }
+
+    .autos{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+        gap:25px;
+    }
+
+    .card{
+        background:white;
+        border-radius:12px;
+        overflow:hidden;
+        box-shadow:0 4px 12px rgba(0,0,0,.15);
+        transition:.3s;
+    }
+
+    .card:hover{
+        transform:translateY(-5px);
+    }
+
+    .card img{
+        width:100%;
+        height:220px;
+        object-fit:cover;
+    }
+
+    .card-content{
+        padding:20px;
+    }
+
+    .card h3{
+        margin-bottom:10px;
+    }
+
+    .precio{
+        color:#e63946;
+        font-size:1.4rem;
+        font-weight:bold;
+        margin:10px 0;
+    }
+
+    .btn{
+        display:inline-block;
+        background:#0077ff;
+        color:white;
+        text-decoration:none;
+        padding:10px 20px;
+        border-radius:6px;
+        margin-top:10px;
+    }
+
+    footer{
+        background:#111;
+        color:white;
+        text-align:center;
+        padding:20px;
+        margin-top:40px;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Autos nuevos</h1>
+    <p>Encuentra tu próximo vehículo nuevo</p>
+</header>
+
+<section class="hero">
+    <h2>Autos 0 KM 2025</h2>
+</section>
+
+<section class="container">
+    <h2 style="margin-bottom:25px;">Modelos Destacados</h2>
+
+    <div class="autos">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800" alt="Sedán">
+            <div class="card-content">
+                <h3>Sedán Executive</h3>
+                <p>Motor 2.0 Turbo, pantalla digital y máxima seguridad.</p>
+                <div class="precio">$24.990.000</div>
+                <a href="#" class="btn">Solicitar Información</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800" alt="SUV">
+            <div class="card-content">
+                <h3>SUV Adventure</h3>
+                <p>Espacio para toda la familia y tecnología de última generación.</p>
+                <div class="precio">$31.990.000</div>
+                <a href="#" class="btn">Solicitar Información</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=800" alt="Deportivo">
+            <div class="card-content">
+                <h3>Sport GT</h3>
+                <p>Diseño deportivo, alto rendimiento y gran confort.</p>
+                <div class="precio">$42.990.000</div>
+                <a href="#" class="btn">Solicitar Información</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Autos nuevos - Todos los derechos reservados.</p>
+</footer>
+
+</body>
 </html>
